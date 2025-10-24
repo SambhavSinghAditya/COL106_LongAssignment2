@@ -1,6 +1,7 @@
 #ifndef AVL_HPP
 #define AVL_HPP
 
+#include <stack>
 #include <vector>
 using namespace std;
 
@@ -36,6 +37,7 @@ public:
     void remove(Key key); //O(logn)
     AVLNode<Key,Value>* find(Key key);// O(logn)
     vector<string> getTopN(int n); // O(min(n,logm)) where m is number of nodes in the tree.}} will give all of them if there is -1...
+    vector<string> getTopNKeys(int n);
 };
 
 #endif

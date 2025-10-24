@@ -212,7 +212,33 @@ vector<string> AVLTree<Key, Value>::getTopN(int n){
             curr=curr->left;
         }
         curr=s.top();s.pop();
-        result.push_back(curr->value);
+        if constexpr (is_same<Value, string>::value) {
+            result.push_back(curr->value);
+        } else {
+            result.push_back(std::to_string(curr->value));
+        }
+        if(result.size()==n)break;
+        curr=curr->right;
+    }
+    return result;
+}
+
+template<typename Key, typename Value>
+vector<string> AVLTree<Key, Value>::getTopNKeys(int n){
+    vector<string> result; // iterative inorder traversal....
+    stack<AVLNode<Key, Value>*> s;
+    AVLNode<Key,Value>* curr=root;
+    while(curr!=nullptr or !s.empty()){
+        while(curr!=nullptr){
+            s.push(curr);
+            curr=curr->left;
+        }
+        curr=s.top();s.pop();
+        if constexpr (is_same<Key, string>::value) {
+            result.push_back(curr->key);
+        } else {
+            result.push_back(std::to_string(curr->key));
+        }
         if(result.size()==n)break;
         curr=curr->right;
     }

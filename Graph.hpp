@@ -13,7 +13,7 @@ using namespace std;
 class Graph{
 private:
     int V;//number of nodes
-    map<string,int> userIndex; // mapping user id to the index (assigning)
+    unordered_map<string,int> userIndex; // mapping user id to the index (assigning)
     vector<AVLTree<string,int>> adjList;//adjacency trees.
 public:
     Graph(int V=0){
@@ -21,11 +21,11 @@ public:
         adjList.resize(V);
     }
     int getUserIndex(string user); //-1 if not there
-    int addUser(string user);//false if already there
-    void addEdge(int user1,int user2);//do nothing if already there 
-    vector<string> getFriends(int user);// returns the list
-    vector<string> suggestFriends(int user,int n);//suggest friends
-    int degreesOfSeparation(int user1,int user2);//-1 if not connected
+    int addUser(string user);//-1 if already there
+    int addEdge(string user1,string user2);//-1 if username not there, 0 if already friends, else 1
+    vector<string> getFriends(string user);// returns the list
+    vector<string> suggestFriends(string user,int n);//suggest friends
+    int degreesOfSeparation(string user1,string user2);//-1 if not connected
 };
 
 #endif

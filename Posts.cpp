@@ -24,7 +24,7 @@ bool Posts::addPost(int userIndex, string text){
 
 vector<string> Posts::getPosts(int userIndex, int n){
     vector<string> result;
-    AVLTree<time_t,string> tree=AVLposts[userIndex];
+    AVLTree<time_t,string>& tree=AVLposts[userIndex];
     result=tree.getTopN(n);
     return result;
 }

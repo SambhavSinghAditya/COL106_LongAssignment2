@@ -52,7 +52,7 @@ AVLNode<Key, Value>* AVLTree<Key, Value>::insert(AVLNode<Key, Value>* node,  Key
 
     if (key < node->key)
         node->left = insert(node->left, key, value);
-    else if (key > node->key)
+    else if (key >= node->key)
         node->right = insert(node->right, key, value);
     else {
         node->value = value; // update value if key exists
@@ -209,16 +209,18 @@ vector<string> AVLTree<Key, Value>::getTopN(int n){
     while(curr!=nullptr or !s.empty()){
         while(curr!=nullptr){
             s.push(curr);
+            curr=curr->right;
+        }
+        if(!s.empty()){
+            curr=s.top();s.pop();
+            if constexpr (is_same<Value, string>::value) {
+                result.push_back(curr->value);
+            } else {
+                result.push_back(std::to_string(curr->value));
+            }
+            if(result.size()==n)break;
             curr=curr->left;
         }
-        curr=s.top();s.pop();
-        if constexpr (is_same<Value, string>::value) {
-            result.push_back(curr->value);
-        } else {
-            result.push_back(std::to_string(curr->value));
-        }
-        if(result.size()==n)break;
-        curr=curr->right;
     }
     return result;
 }

@@ -34,8 +34,8 @@ public:
     ~AVLTree();
     void insert(Key key, Value value);//O(logn)
     AVLNode<Key,Value>* getRoot();
-    void remove(Key key); //O(logn)
-    AVLNode<Key,Value>* find(Key key);// O(logn)
+    void remove(Key key); //O(logn) no need here
+    AVLNode<Key,Value>* find(Key key);// O(logn) no need here too
     vector<string> getTopN(int n); // O(min(n,logm)) where m is number of nodes in the tree.}} will give all of them if there is -1...
     vector<string> getTopNKeys(int n);
 };

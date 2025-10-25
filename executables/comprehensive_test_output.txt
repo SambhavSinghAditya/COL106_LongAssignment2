@@ -1,0 +1,260 @@
+================================================================================
+COMPREHENSIVE EXPECTED OUTPUT FOR SOCIALNET SIMULATOR
+================================================================================
+
+This file shows the expected output for each command that produces output.
+Commands that don't produce output (ADD USER, ADD FRIEND, ADD POST) are not shown.
+
+================================================================================
+
+Command #118: LIST FRIENDS user1
+--------------------------------------------------------------------------------
+testuser
+user2
+user3
+user4
+user5
+user6
+
+Command #119: LIST FRIENDS user8
+--------------------------------------------------------------------------------
+user19
+user2
+user20
+user7
+user9
+
+Command #120: LIST FRIENDS user31
+--------------------------------------------------------------------------------
+user30
+user32
+user33
+user34
+user35
+user36
+user37
+user38
+user39
+user40
+
+Command #121: LIST FRIENDS user41
+--------------------------------------------------------------------------------
+(No output expected - user has no friends)
+
+Command #122: DEGREES OF SEPARATION user1 user2
+--------------------------------------------------------------------------------
+1
+
+Command #123: DEGREES OF SEPARATION user1 user9
+--------------------------------------------------------------------------------
+2
+
+Command #124: DEGREES OF SEPARATION user1 user25
+--------------------------------------------------------------------------------
+8
+
+Command #125: DEGREES OF SEPARATION user1 user35
+--------------------------------------------------------------------------------
+15
+
+Command #126: DEGREES OF SEPARATION user1 user41
+--------------------------------------------------------------------------------
+-1
+
+Command #127: DEGREES OF SEPARATION user41 user42
+--------------------------------------------------------------------------------
+-1
+
+Command #128: DEGREES OF SEPARATION user32 user40
+--------------------------------------------------------------------------------
+2
+
+Command #145: OUTPUT POSTS user1 5
+--------------------------------------------------------------------------------
+This is my tenth post!
+Testing post functionality.
+The social network simulator is coming along nicely.
+Working on my COL106 assignment.
+Graphs are everywhere in computer science.
+
+Command #146: OUTPUT POSTS user1 -1
+--------------------------------------------------------------------------------
+This is my tenth post!
+Testing post functionality.
+The social network simulator is coming along nicely.
+Working on my COL106 assignment.
+Graphs are everywhere in computer science.
+AVL trees are fascinating.
+Learning data structures is fun!
+Having a great day with friends.
+Just joined this amazing network!
+Hello World! This is my first post.
+
+Command #147: OUTPUT POSTS user1 15
+--------------------------------------------------------------------------------
+This is my tenth post!
+Testing post functionality.
+The social network simulator is coming along nicely.
+Working on my COL106 assignment.
+Graphs are everywhere in computer science.
+AVL trees are fascinating.
+Learning data structures is fun!
+Having a great day with friends.
+Just joined this amazing network!
+Hello World! This is my first post.
+
+Command #148: OUTPUT POSTS user2 2
+--------------------------------------------------------------------------------
+Third post from user2
+Second post from user2
+
+Command #149: OUTPUT POSTS user41 -1
+--------------------------------------------------------------------------------
+Lonely but still posting
+
+Command #150: OUTPUT POSTS user50 5
+--------------------------------------------------------------------------------
+(No output expected - user has no posts)
+
+Command #151: SUGGEST FRIENDS user1 5
+--------------------------------------------------------------------------------
+user7
+user10
+user11
+user12
+user13
+
+Command #152: SUGGEST FRIENDS user1 0
+--------------------------------------------------------------------------------
+(No output expected - N is 0)
+
+Command #153: SUGGEST FRIENDS user32 3
+--------------------------------------------------------------------------------
+user30
+user33
+user34
+
+Command #154: SUGGEST FRIENDS user21 5
+--------------------------------------------------------------------------------
+user17
+user19
+user23
+user8
+
+Command #155: SUGGEST FRIENDS user41 10
+--------------------------------------------------------------------------------
+(No output expected - no valid suggestions)
+
+Command #159: LIST FRIENDS TESTUSER
+--------------------------------------------------------------------------------
+user1
+
+Command #160: OUTPUT POSTS TeStUsEr -1
+--------------------------------------------------------------------------------
+Case insensitive post
+
+Command #200: DEGREES OF SEPARATION user51 user70
+--------------------------------------------------------------------------------
+4
+
+Command #201: DEGREES OF SEPARATION user66 user70
+--------------------------------------------------------------------------------
+6
+
+Command #232: OUTPUT POSTS user51 10
+--------------------------------------------------------------------------------
+Post number 30 from user51
+Post number 29 from user51
+Post number 28 from user51
+Post number 27 from user51
+Post number 26 from user51
+Post number 25 from user51
+Post number 24 from user51
+Post number 23 from user51
+Post number 22 from user51
+Post number 21 from user51
+
+Command #233: OUTPUT POSTS user51 -1
+--------------------------------------------------------------------------------
+Post number 30 from user51
+Post number 29 from user51
+Post number 28 from user51
+Post number 27 from user51
+Post number 26 from user51
+Post number 25 from user51
+Post number 24 from user51
+Post number 23 from user51
+Post number 22 from user51
+Post number 21 from user51
+Post number 20 from user51
+Post number 19 from user51
+Post number 18 from user51
+Post number 17 from user51
+Post number 16 from user51
+Post number 15 from user51
+Post number 14 from user51
+Post number 13 from user51
+Post number 12 from user51
+Post number 11 from user51
+Post number 10 from user51
+Post number 9 from user51
+Post number 8 from user51
+Post number 7 from user51
+Post number 6 from user51
+Post number 5 from user51
+Post number 4 from user51
+Post number 3 from user51
+Post number 2 from user51
+Post number 1 from user51
+
+Command #244: SUGGEST FRIENDS user71 10
+--------------------------------------------------------------------------------
+user73
+user74
+
+Command #260: SUGGEST FRIENDS connector 5
+--------------------------------------------------------------------------------
+spoke76
+spoke77
+spoke78
+
+Command #265: OUTPUT POSTS user1 4
+--------------------------------------------------------------------------------
+A very long post that contains a lot of text to test if the AVL tree can handle longer strings properly. This should not cause any issues with the implementation. The post should be stored correctly and retrieved in the right order.
+Numbers 123456789 and symbols !?.
+Multiple    spaces   and   tabs
+This post has special chars: @#$%^&*()
+
+Command #266: DEGREES OF SEPARATION user1 user51
+--------------------------------------------------------------------------------
+-1
+
+Command #267: DEGREES OF SEPARATION user8 user15
+--------------------------------------------------------------------------------
+3
+
+Command #268: LIST FRIENDS user31
+--------------------------------------------------------------------------------
+user30
+user32
+user33
+user34
+user35
+user36
+user37
+user38
+user39
+user40
+
+Command #269: SUGGEST FRIENDS user8 100
+--------------------------------------------------------------------------------
+user17
+user18
+user3
+user1
+user10
+user11
+user16
+user21
+user4
+user6

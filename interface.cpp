@@ -110,12 +110,12 @@ void getcommand(string line){
 }
 
 int main(){
-    freopen("executables/input.txt","r",stdin);
+    //freopen("executables/input.txt","r",stdin);
     string line;
     currUserCount=0;
     cout<<"> ";
     while(getline(cin, line)){
-        cout<<line<<endl;
+        //cout<<line<<endl;
         if(line=="EXIT"){
             break;
         }

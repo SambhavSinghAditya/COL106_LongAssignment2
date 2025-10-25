@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sambhavsinghaditya/user_defined/git_repos/COL106_LongAssignment2/program'
+relocations:     []
+...

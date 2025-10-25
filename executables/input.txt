@@ -1,23 +1,295 @@
-ADD_USER a
-ADD_USER b 
-ADD_USER c 
-ADD_USER d
-ADD_USER e
-ADD_FRIEND A d
-ADD_FRIEND a c
-ADD_FRIEND b e
-ADD_FRIEND b d
-ADD_FRIEND b c 
-LIST_FRIENDS b
-LIST_FRIENDS c
-LIST_FRIENDS d
-DEGREES_OF_SEPARATION a e
-SUGGEST_FRIENDS a 2
-ADD_POST a im A 1
-ADD_POST a im here 2
-ADD_POST a ok here i am 3
-ADD_POST a hiii 4
-OUTPUT_POSTS a 3
-OUTPUT_POSTS k
-ADD_USER f
+ADD_USER user1
+ADD_USER user2
+ADD_USER user3
+ADD_USER user4
+ADD_USER user5
+ADD_USER user6
+ADD_USER user7
+ADD_USER user8
+ADD_USER user9
+ADD_USER user10
+ADD_USER user11
+ADD_USER user12
+ADD_USER user13
+ADD_USER user14
+ADD_USER user15
+ADD_USER user16
+ADD_USER user17
+ADD_USER user18
+ADD_USER user19
+ADD_USER user20
+ADD_USER user21
+ADD_USER user22
+ADD_USER user23
+ADD_USER user24
+ADD_USER user25
+ADD_USER user26
+ADD_USER user27
+ADD_USER user28
+ADD_USER user29
+ADD_USER user30
+ADD_USER user31
+ADD_USER user32
+ADD_USER user33
+ADD_USER user34
+ADD_USER user35
+ADD_USER user36
+ADD_USER user37
+ADD_USER user38
+ADD_USER user39
+ADD_USER user40
+ADD_USER user41
+ADD_USER user42
+ADD_USER user43
+ADD_USER user44
+ADD_USER user45
+ADD_USER user46
+ADD_USER user47
+ADD_USER user48
+ADD_USER user49
+ADD_USER user50
+ADD_FRIEND user1 user2
+ADD_FRIEND user1 user3
+ADD_FRIEND user1 user4
+ADD_FRIEND user1 user5
+ADD_FRIEND user1 user6
+ADD_FRIEND user2 user3
+ADD_FRIEND user2 user4
+ADD_FRIEND user2 user7
+ADD_FRIEND user2 user8
+ADD_FRIEND user3 user4
+ADD_FRIEND user3 user9
+ADD_FRIEND user3 user10
+ADD_FRIEND user4 user5
+ADD_FRIEND user4 user11
+ADD_FRIEND user4 user12
+ADD_FRIEND user5 user6
+ADD_FRIEND user5 user13
+ADD_FRIEND user5 user14
+ADD_FRIEND user6 user7
+ADD_FRIEND user6 user15
+ADD_FRIEND user6 user16
+ADD_FRIEND user7 user8
+ADD_FRIEND user7 user17
+ADD_FRIEND user7 user18
+ADD_FRIEND user8 user9
+ADD_FRIEND user8 user19
+ADD_FRIEND user8 user20
+ADD_FRIEND user9 user10
+ADD_FRIEND user9 user11
+ADD_FRIEND user10 user12
+ADD_FRIEND user10 user13
+ADD_FRIEND user11 user12
+ADD_FRIEND user11 user14
+ADD_FRIEND user12 user13
+ADD_FRIEND user12 user15
+ADD_FRIEND user13 user14
+ADD_FRIEND user13 user16
+ADD_FRIEND user14 user15
+ADD_FRIEND user14 user17
+ADD_FRIEND user15 user16
+ADD_FRIEND user15 user18
+ADD_FRIEND user16 user17
+ADD_FRIEND user16 user19
+ADD_FRIEND user17 user18
+ADD_FRIEND user17 user20
+ADD_FRIEND user18 user19
+ADD_FRIEND user19 user20
+ADD_FRIEND user21 user22
+ADD_FRIEND user22 user23
+ADD_FRIEND user23 user24
+ADD_FRIEND user24 user25
+ADD_FRIEND user25 user26
+ADD_FRIEND user26 user27
+ADD_FRIEND user27 user28
+ADD_FRIEND user28 user29
+ADD_FRIEND user29 user30
+ADD_FRIEND user31 user32
+ADD_FRIEND user31 user33
+ADD_FRIEND user31 user34
+ADD_FRIEND user31 user35
+ADD_FRIEND user31 user36
+ADD_FRIEND user31 user37
+ADD_FRIEND user31 user38
+ADD_FRIEND user31 user39
+ADD_FRIEND user31 user40
+ADD_FRIEND user20 user21
+ADD_FRIEND user30 user31
+
+
+LIST_FRIENDS user1
+LIST_FRIENDS user8
+LIST_FRIENDS user31
+LIST_FRIENDS user41
+
+
+DEGREES_OF_SEPARATION user1 user2
+DEGREES_OF_SEPARATION user1 user9
+DEGREES_OF_SEPARATION user1 user25
+DEGREES_OF_SEPARATION user1 user35
+DEGREES_OF_SEPARATION user1 user41
+DEGREES_OF_SEPARATION user41 user42
+DEGREES_OF_SEPARATION user32 user40
+
+
+ADD_POST user1 "Hello World! This is my first post."
+ADD_POST user1 "Just joined this amazing network!"
+ADD_POST user1 "Having a great day with friends."
+ADD_POST user1 "Learning data structures is fun!"
+ADD_POST user1 "AVL trees are fascinating."
+ADD_POST user1 "Graphs are everywhere in computer science."
+ADD_POST user1 "Working on my COL106 assignment."
+ADD_POST user1 "The social network simulator is coming along nicely."
+ADD_POST user1 "Testing post functionality."
+ADD_POST user1 "This is my tenth post!"
+ADD_POST user2 "First post from user2"
+ADD_POST user2 "Second post from user2"
+ADD_POST user2 "Third post from user2"
+ADD_POST user31 "Hello from the center of the star!"
+ADD_POST user31 "Connected to many friends"
+ADD_POST user41 "Lonely but still posting"
+
+
+OUTPUT_POSTS user1 5
+OUTPUT_POSTS user1 -1
+OUTPUT_POSTS user1 15
+OUTPUT_POSTS user2 2
+OUTPUT_POSTS user41 -1
+OUTPUT_POSTS user50 5
+
+
+SUGGEST_FRIENDS user1 5
+SUGGEST_FRIENDS user1 0
+SUGGEST_FRIENDS user32 3
+SUGGEST_FRIENDS user21 5
+SUGGEST_FRIENDS user41 10
+
+
+
+ADD_USER TestUser
+ADD_FRIEND user1 TestUser
+ADD_POST testuser "Case insensitive post"
+LIST_FRIENDS TESTUSER
+OUTPUT_POSTS TeStUsEr -1
+ADD_USER user51
+ADD_USER user52
+ADD_USER user53
+ADD_USER user54
+ADD_USER user55
+ADD_USER user56
+ADD_USER user57
+ADD_USER user58
+ADD_USER user59
+ADD_USER user60
+ADD_USER user61
+ADD_USER user62
+ADD_USER user63
+LIST_FRIENDS user8
+ADD_USER user64
+LIST_FRIENDS user8
+ADD_USER user65
+ADD_USER user66
+ADD_USER user67
+ADD_USER user68
+ADD_USER user69
+ADD_USER user70
+ADD_FRIEND user51 user52
+ADD_FRIEND user51 user53
+ADD_FRIEND user52 user54
+ADD_FRIEND user52 user55
+ADD_FRIEND user53 user56
+ADD_FRIEND user53 user57
+ADD_FRIEND user54 user58
+ADD_FRIEND user54 user59
+ADD_FRIEND user55 user60
+ADD_FRIEND user55 user61
+ADD_FRIEND user56 user62
+ADD_FRIEND user56 user63
+ADD_FRIEND user57 user64
+ADD_FRIEND user57 user65
+ADD_FRIEND user58 user66
+ADD_FRIEND user58 user67
+ADD_FRIEND user59 user68
+ADD_FRIEND user59 user69
+ADD_FRIEND user60 user70
+DEGREES_OF_SEPARATION user51 user70
+DEGREES_OF_SEPARATION user66 user70
+
+
+ADD_POST user51 "Post number 1 from user51"
+ADD_POST user51 "Post number 2 from user51"
+ADD_POST user51 "Post number 3 from user51"
+ADD_POST user51 "Post number 4 from user51"
+ADD_POST user51 "Post number 5 from user51"
+ADD_POST user51 "Post number 6 from user51"
+ADD_POST user51 "Post number 7 from user51"
+ADD_POST user51 "Post number 8 from user51"
+ADD_POST user51 "Post number 9 from user51"
+ADD_POST user51 "Post number 10 from user51"
+ADD_POST user51 "Post number 11 from user51"
+ADD_POST user51 "Post number 12 from user51"
+ADD_POST user51 "Post number 13 from user51"
+ADD_POST user51 "Post number 14 from user51"
+ADD_POST user51 "Post number 15 from user51"
+ADD_POST user51 "Post number 16 from user51"
+ADD_POST user51 "Post number 17 from user51"
+ADD_POST user51 "Post number 18 from user51"
+ADD_POST user51 "Post number 19 from user51"
+ADD_POST user51 "Post number 20 from user51"
+ADD_POST user51 "Post number 21 from user51"
+ADD_POST user51 "Post number 22 from user51"
+ADD_POST user51 "Post number 23 from user51"
+ADD_POST user51 "Post number 24 from user51"
+ADD_POST user51 "Post number 25 from user51"
+ADD_POST user51 "Post number 26 from user51"
+ADD_POST user51 "Post number 27 from user51"
+ADD_POST user51 "Post number 28 from user51"
+ADD_POST user51 "Post number 29 from user51"
+ADD_POST user51 "Post number 30 from user51"
+OUTPUT_POSTS user51 10
+OUTPUT_POSTS user51 -1
+
+
+ADD_USER user71
+ADD_USER user72
+ADD_USER user73
+ADD_USER user74
+ADD_USER user75
+ADD_FRIEND user71 user72
+ADD_FRIEND user72 user73
+ADD_FRIEND user73 user74
+ADD_FRIEND user74 user75
+ADD_FRIEND user75 user71
+SUGGEST_FRIENDS user71 10
+ADD_USER hub1
+ADD_USER hub2
+ADD_USER connector
+ADD_USER spoke76
+ADD_USER spoke77
+ADD_USER spoke78
+ADD_USER spoke79
+ADD_USER spoke80
+ADD_FRIEND hub1 spoke76
+ADD_FRIEND hub1 spoke77
+ADD_FRIEND hub1 spoke78
+ADD_FRIEND hub2 spoke76
+ADD_FRIEND hub2 spoke77
+ADD_FRIEND connector hub1
+ADD_FRIEND connector hub2
+SUGGEST_FRIENDS connector 5
+
+
+ADD_POST user1 "This post has special chars: @#$%^&*()"
+ADD_POST user1 "Multiple    spaces   and   tabs"
+ADD_POST user1 "Numbers 123456789 and symbols !?."
+ADD_POST user1 "A very long post that contains a lot of text to test if the AVL tree can handle longer strings properly. This should not cause any issues with the implementation. The post should be stored correctly and retrieved in the right order."
+OUTPUT_POSTS user1 4
+
+
+DEGREES_OF_SEPARATION user1 user51
+DEGREES_OF_SEPARATION user8 user15
+LIST_FRIENDS user31
+SUGGEST_FRIENDS user8 100
+
+
 EXIT

@@ -14,7 +14,7 @@ int Graph::addUser(string user){
         return -1;
     }
     userIndex[user]=V;
-    AVLTree<string,int> newTree;
+    AVLTree<string,int>* newTree = new AVLTree<string,int>();
     adjList.push_back(newTree);
     V++;
     return userIndex[user];
@@ -24,16 +24,16 @@ int Graph::addEdge(string user1,string user2){
     if(userIndex.find(user1)==userIndex.end() or userIndex.find(user2)==userIndex.end()){
         return -1;
     }
-    if(adjList[userIndex[user1]].find(user2)==nullptr){
-        adjList[userIndex[user1]].insert(user2,userIndex[user2]);
-        adjList[userIndex[user2]].insert(user1,userIndex[user1]);
+    if(adjList[userIndex[user1]]->find(user2)==nullptr){
+        adjList[userIndex[user1]]->insert(user2,userIndex[user2]);
+        adjList[userIndex[user2]]->insert(user1,userIndex[user1]);
         return 1;
     }
     else return 0;
 }
 
 vector<string> Graph::getFriends(string user){
-    return adjList[userIndex[user]].getTopNKeys(-1);
+    return adjList[userIndex[user]]->getTopNKeys(-1);
 }
 
 vector<string> Graph::suggestFriends(string user,int n){
@@ -59,7 +59,10 @@ vector<string> Graph::suggestFriends(string user,int n){
         if(it.second<=0)continue;
         candidates.push_back({it.second,it.first});
     }
-    sort(candidates.begin(),candidates.end(),greater<pair<int,string>>());
+    sort(candidates.begin(),candidates.end(),[](pair<int,string> a,pair<int,string> b){
+        if(a.first!=b.first) return a.first>b.first;
+        return a.second<b.second;
+    });
     vector<string> suggestions;
     for(int i=0;i<n && i<candidates.size();i++){
         suggestions.push_back(candidates[i].second);

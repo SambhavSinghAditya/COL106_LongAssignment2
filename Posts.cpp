@@ -10,7 +10,7 @@ bool Posts::addUser(int userIndex){
     if(userIndex!=n){cout<<"User index mismatch in posts class"<<endl;return false;}
     else{
         n++;
-        AVLTree<time_t,string> newTree;
+        AVLTree<time_t,string>* newTree = new AVLTree<time_t,string>();
         AVLposts.push_back(newTree);
         return true;
     }
@@ -18,14 +18,14 @@ bool Posts::addUser(int userIndex){
 
 bool Posts::addPost(int userIndex, string text){
     time_t currTime=time(0);
-    AVLposts[userIndex].insert(currTime,text);
+    AVLposts[userIndex]->insert(currTime,text);
     return true;
 }
 
 vector<string> Posts::getPosts(int userIndex, int n){
     vector<string> result;
-    AVLTree<time_t,string>& tree=AVLposts[userIndex];
-    result=tree.getTopN(n);
+    AVLTree<time_t,string>* tree=AVLposts[userIndex];
+    result=tree->getTopN(n);
     return result;
 }
 

@@ -12,7 +12,7 @@ using namespace std;
 
 class Posts{
 private:
-    vector<AVLTree<time_t,string>> AVLposts;
+    vector<AVLTree<time_t,string>*> AVLposts;
     int n;//size of the vector
 public:
     Posts(int n=0);

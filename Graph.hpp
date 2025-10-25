@@ -14,7 +14,7 @@ class Graph{
 private:
     int V;//number of nodes
     unordered_map<string,int> userIndex; // mapping user id to the index (assigning)
-    vector<AVLTree<string,int>> adjList;//adjacency trees.
+    vector<AVLTree<string,int>*> adjList;//adjacency trees.
 public:
     Graph(int V=0){
         this->V=V;
